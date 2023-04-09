@@ -1,0 +1,31 @@
+{
+  "name": "test-shopper-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "start": "ts-node-esm ./src/server.ts",
+    "dev": "npx nodemon ./src/server.ts",
+    "lint": "npx eslint ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmparadinha/teste-shopper-backend.git"
+  },
+  "author": "mmparadinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmparadinha/teste-shopper-backend/issues"
+  },
+  "homepage": "https://github.com/mmparadinha/teste-shopper-backend#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.0.4"
+  }
+}
