@@ -25,7 +25,7 @@ server
   .use(productsRouter)
 
   .listen(port, () => {
-    console.log(`Ouvindo na porta ${port}!`);
+    console.log(`Listening at ${port}!`);
   });
 
 export default server;
