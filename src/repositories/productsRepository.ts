@@ -1,7 +1,11 @@
 import prisma from '../database/database';
 
 async function getAllProducts () {
-  return await prisma.product.findMany();
+  return await prisma.product.findMany({
+    where: {
+      active: true
+    }
+  });
 }
 
 const productsRepository = {
