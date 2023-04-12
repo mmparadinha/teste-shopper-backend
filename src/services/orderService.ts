@@ -1,9 +1,9 @@
-import { product } from '@prisma/client';
+import type { product } from '@prisma/client';
 import orderRepository from '../repositories/orderRepository';
 
 type OrderProduct = product & { amount: number };
 
-async function createOrder(orderInfo: {
+async function createOrder (orderInfo: {
   customerName: string
   deliveryDate: Date
   totalCost: number

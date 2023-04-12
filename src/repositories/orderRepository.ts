@@ -1,6 +1,6 @@
 import prisma from '../database/database';
 
-async function createOrder(orderInfo: {
+async function createOrder (orderInfo: {
   customerName: string
   deliveryDate: Date
   totalCost: number
@@ -9,12 +9,12 @@ async function createOrder(orderInfo: {
     data: {
       customerName: orderInfo.customerName,
       deliveryDate: orderInfo.deliveryDate,
-      totalCost: orderInfo.totalCost,
+      totalCost: orderInfo.totalCost
     }
   });
 }
 
-async function createOrderProducts(orderId: number, productId: number, amount: number) {
+async function createOrderProducts (orderId: number, productId: number, amount: number) {
   return await prisma.orderProducts.create({
     data: {
       orderId,
@@ -24,7 +24,7 @@ async function createOrderProducts(orderId: number, productId: number, amount: n
   });
 }
 
-async function updateProductStock(productId: number, amount: number) {
+async function updateProductStock (productId: number, amount: number) {
   return await prisma.product.update({
     where: {
       id: productId
