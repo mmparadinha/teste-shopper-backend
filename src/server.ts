@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import productsRouter from './routes/productsRouter';
+import orderRouter from './routes/orderRouter';
 
 dotenv.config();
 const port = process.env.BACKEND_PORT ?? 5000;
@@ -23,6 +24,7 @@ server
   .use(limiter)
 
   .use(productsRouter)
+  .use(orderRouter)
 
   .listen(port, () => {
     console.log(`Listening at ${port}!`);

@@ -4,6 +4,9 @@ async function getAllProducts () {
   return await prisma.product.findMany({
     where: {
       active: true
+    },
+    orderBy: {
+      name: 'asc'
     }
   });
 }
